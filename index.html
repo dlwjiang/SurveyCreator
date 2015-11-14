@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Survey Rabbit</title>
+  <style type="text/css">
+    #widgets{
+      display: inline-block;
+      width: 20%;
+      float: left;
+    }
+    #composing-area{
+      width: 80%;
+      display: inline-block;
+    }
+  </style>
+</head>
+<body>
+
+  <app></app>
+
+<!--
+  <div id="widgets">
+    <div>Widgets</div>
+    <div>Radio Btn</div>
+    <div>Input Btn</div>
+  </div>
+
+  <div id="composing-area">
+
+    <div>
+      <span>
+        <span>Title</span>
+        <span>Input</span>
+      </span>
+      <span>
+        Preview Button
+      </span>
+    </div>
+
+    <widget-list></widget-list>
+
+    <div id="add-radio-instance">Add Radio</div>
+    <div id="add-checkbox-instance">Add Checkbox</div>
+
+  </div>
+  -->
+
+  <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script src="./riot+compiler.js"></script> 
+  <script src="./app.js" type="riot/tag"></script>
+  <script src="./widget-list.js" type="riot/tag"></script>
+  <script src="./widget-instance.js" type="riot/tag"></script>
+
+  <script>
+
+  var widgetOptions = {
+      widgets: [
+        {
+         type: 'Radio', 
+         question: 'What\'s your favorite color?',
+         options: "blue,red,grey,purple"
+        },
+        {
+          type: 'Checkbox', 
+          question: 'What do you like to eat?',
+          options: 'fish,meat,birds'
+        },
+        {
+          type: 'Radio', 
+          question: 'What\'s your favorite OS?',
+          options: 'OSX, Linux'
+        },
+      ]
+  }
+
+  riot.mount('app', widgetOptions);
+    
+  //   riot.mount('widget-list', widgetOptions);
+
+  //   $("#add-radio-instance").click(function () {
+  //     widgetOptions.widgets.push({
+  //       type: 'Radio',
+  //       question: '',
+  //       options: ''
+  //     });
+  //     console.log("???", widgetOptions.widgets);
+  //     riot.update();
+  //   })
+
+  //   $("#add-checkbox-instance").click(function () {
+  //     widgetOptions.widgets.push({
+  //       type: 'Checkbox',
+  //       question: '',
+  //       options: ''
+  //     });
+  //     riot.update();
+  //   })
+  
+
+  </script>
+
+</body>
+</html>
