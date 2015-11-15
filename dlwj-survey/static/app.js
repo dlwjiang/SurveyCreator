@@ -3,14 +3,14 @@
   <!-- =========== -->
   <!-- Left Column -->
   <!-- =========== -->
-  <section id="widgets">
+  <section id="widgets" class={ hidden: previewMode}>
     <h1>Widgets</h1>
     <div class='add-widget btn' 
          id="add-radio-instance" 
          onclick={addRadio}> ⊕ Radio</div>
     <div class='add-widget btn' 
          id="add-checkbox-instance" 
-         onclick={addCheckbox}> ⊕ Input</div>
+         onclick={addCheckbox}> ⊕ Checkbox</div>
   </section>
 
   <!-- ============ -->
@@ -41,6 +41,9 @@
   
     #widgets {
       text-align: center;
+    }
+    .hidden {
+      opacity: 0;
     }
     h1 {
       margin-top:0px;
