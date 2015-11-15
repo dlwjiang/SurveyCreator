@@ -33,6 +33,7 @@
       padding:10px;
       margin: 10px;
       background-color: #eee;
+      border-radius: 8px;
     }
     h1{ 
       font-size: 40px;
