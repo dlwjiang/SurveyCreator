@@ -31,6 +31,7 @@
       padding:5px 10px 10px 10px;
       margin: 10px 10px 10px 0px;
       background-color: #eee;
+      border-radius: 8px;
     }
     .widget-type {
       color: #8E0505;

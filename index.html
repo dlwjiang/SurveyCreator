@@ -16,11 +16,17 @@
       font-family: 'Raleway', sans-serif;
       color: #222;
     }
+    #container {
+      width: 850px;
+      margin: 0px auto;
+    }
   </style>
 </head>
 <body>
 
-  <app></app>
+  <div id='container'>
+    <app></app>
+  </div>
 
   <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
@@ -38,7 +44,7 @@
         {
          type: 'radio', 
          question: 'What\'s your favorite color?',
-         options: "blue,red,grey,purple"
+         options: "blue,red,grey,purple, #000"
         },
         {
           type: 'checkbox', 
@@ -48,7 +54,7 @@
         {
           type: 'radio', 
           question: 'What\'s your favorite OS?',
-          options: 'OSX, Linux'
+          options: 'OSX, Linux, ???'
         },
       ]
   }

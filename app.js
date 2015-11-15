@@ -1,5 +1,8 @@
 <app>
 
+  <!-- =========== -->
+  <!-- Left Column -->
+  <!-- =========== -->
   <section id="widgets">
     <h1>Widgets</h1>
     <div class='add-widget btn' 
@@ -10,6 +13,9 @@
          onclick={addCheckbox}> ⊕ Input</div>
   </section>
 
+  <!-- ============ -->
+  <!-- Right Column -->
+  <!-- ============ -->
   <section id="composing-area">
 
     <div>
@@ -32,30 +38,35 @@
   </section>
 
   <style scoped>
-  h1 {
-    margin-top:0px;
-    margin-bottom: 5px;
-  }
-  #add-radio-instance, #add-checkbox-instance {
-    font-size: 20px;
-    margin-top: 10px;
-    width: 80%;
-    padding: 5px 5px 5px 0px;
-    text-align: center;
-  }
-  .btn{
-    cursor: pointer;
-    font-size: 13px;
-    background-color: #eee;
-    border-radius: 20px;
-    width: 120px;
-    padding: 5px;
-    text-align: center;
-  }
-  #survey-title {
-    width: 70%;
-    height: 20px;
-  }
+  
+    #widgets {
+      text-align: center;
+    }
+    h1 {
+      margin-top:0px;
+      margin-bottom: 5px;
+    }
+    #add-radio-instance, #add-checkbox-instance {
+      font-size: 20px;
+      margin: 0px auto;
+      margin-top: 10px;
+      width: 80%;
+      padding: 5px 5px 5px 0px;
+      text-align: center;
+    }
+    .btn{
+      cursor: pointer;
+      font-size: 13px;
+      background-color: #eee;
+      border-radius: 20px;
+      width: 120px;
+      padding: 5px;
+      text-align: center;
+    }
+    #survey-title {
+      width: 70%;
+      height: 20px;
+    }
   
   </style>
 
