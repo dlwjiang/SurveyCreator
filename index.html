@@ -12,90 +12,48 @@
       width: 80%;
       display: inline-block;
     }
+    body {
+      font-family: 'Raleway', sans-serif;
+      color: #222;
+    }
   </style>
 </head>
 <body>
 
   <app></app>
 
-<!--
-  <div id="widgets">
-    <div>Widgets</div>
-    <div>Radio Btn</div>
-    <div>Input Btn</div>
-  </div>
-
-  <div id="composing-area">
-
-    <div>
-      <span>
-        <span>Title</span>
-        <span>Input</span>
-      </span>
-      <span>
-        Preview Button
-      </span>
-    </div>
-
-    <widget-list></widget-list>
-
-    <div id="add-radio-instance">Add Radio</div>
-    <div id="add-checkbox-instance">Add Checkbox</div>
-
-  </div>
-  -->
-
   <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
   <script src="./riot+compiler.js"></script> 
+  <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
   <script src="./app.js" type="riot/tag"></script>
   <script src="./widget-list.js" type="riot/tag"></script>
   <script src="./widget-instance.js" type="riot/tag"></script>
+  <script src="./survey-preview.js" type="riot/tag"></script>
 
   <script>
 
   var widgetOptions = {
       widgets: [
         {
-         type: 'Radio', 
+         type: 'radio', 
          question: 'What\'s your favorite color?',
          options: "blue,red,grey,purple"
         },
         {
-          type: 'Checkbox', 
+          type: 'checkbox', 
           question: 'What do you like to eat?',
           options: 'fish,meat,birds'
         },
         {
-          type: 'Radio', 
+          type: 'radio', 
           question: 'What\'s your favorite OS?',
           options: 'OSX, Linux'
         },
       ]
   }
 
-  riot.mount('app', widgetOptions);
-    
-  //   riot.mount('widget-list', widgetOptions);
-
-  //   $("#add-radio-instance").click(function () {
-  //     widgetOptions.widgets.push({
-  //       type: 'Radio',
-  //       question: '',
-  //       options: ''
-  //     });
-  //     console.log("???", widgetOptions.widgets);
-  //     riot.update();
-  //   })
-
-  //   $("#add-checkbox-instance").click(function () {
-  //     widgetOptions.widgets.push({
-  //       type: 'Checkbox',
-  //       question: '',
-  //       options: ''
-  //     });
-  //     riot.update();
-  //   })
-  
+  riot.mount('app', widgetOptions);  
 
   </script>
 
