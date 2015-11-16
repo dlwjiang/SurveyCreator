@@ -1,7 +1,7 @@
 <survey-preview>
 
   <h1 id='title'>
-    { opts.data.title || "No Title" }
+    { opts.data.title || 'No Title' }
   </h1>
 
   <div id='questions'>
@@ -13,9 +13,9 @@
       <!-- Radio/Checkboxes -->
       <div>
 
-        <div each={ option in widget.options}>
+        <div each={ option in widget.options }>
           <span>
-            <input type={ widget.type === 'radio' ? 'radio' : 'checkbox'}
+            <input type={ widget.type }
                    name={ i }
                    value={ option }/>
           </span>

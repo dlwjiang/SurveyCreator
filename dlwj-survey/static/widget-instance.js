@@ -1,14 +1,14 @@
 <widget-instance>
 
   <div>
-    <span class="widget-type">{ opts.widget.type }</span>
-    <span class="remove-widget" onclick={ remove }>x</span>
+    <span class='widget-type'>{ opts.widget.type }</span>
+    <span class='remove-widget' onclick={ remove }>x</span>
   </div>
 
   <div class='user-input'>    
     <span>
       <span class='input-label'>Question:</span>
-      <input type="text" 
+      <input type='text' 
              value={ opts.widget.question } 
              onkeyup={ editQuestion }>
     </span>
@@ -17,8 +17,8 @@
   <div class='user-input'>
     <span>
       <span class='input-label'>Options:</span>
-      <input type="text" 
-             placeholder="Comma separated" 
+      <input type='text' 
+             placeholder='Comma separated' 
              value={ opts.widget.options }
              onkeyup={ editOptions }>
     </span>
@@ -56,7 +56,6 @@
   </style>
 
   <script >
-
 
     editQuestion(e) {
       opts.widget.question = e.target.value;

@@ -1,6 +1,6 @@
 <widget-list>
 
-  <div each={widget,i in opts.widgets}>
+  <div each={widget,i in opts.widgets }>
 
     <widget-instance 
       widget= { widget }

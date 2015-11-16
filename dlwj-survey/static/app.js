@@ -3,31 +3,31 @@
   <!-- =========== -->
   <!-- Left Column -->
   <!-- =========== -->
-  <section id="widgets" class={ hidden: previewMode}>
+  <section id='widgets' class={ hidden: previewMode }>
     <h1>Widgets</h1>
     <div class='add-widget btn' 
-         id="add-radio-instance" 
-         onclick={addRadio}> ⊕ Radio</div>
+         id='add-radio-instance' 
+         onclick={ addRadio }> ⊕ Radio </div>
     <div class='add-widget btn' 
-         id="add-checkbox-instance" 
-         onclick={addCheckbox}> ⊕ Checkbox</div>
+         id='add-checkbox-instance' 
+         onclick={ addCheckbox }> ⊕ Checkbox </div>
   </section>
 
   <!-- ============ -->
   <!-- Right Column -->
   <!-- ============ -->
-  <section id="composing-area">
+  <section id='composing-area'>
 
     <div>
 
       <span show={ !previewMode }>
         <span>Title: </span>
-        <span><input type="text" value='This Survey of Mine' id='survey-title'/></span>
+        <span><input type='text' value='This Survey of Mine' id='survey-title'/></span>
       </span>
 
       <span onclick={ showPreview }>
-        <span show={ !previewMode } class="preview btn">Preview</span>
-        <span show={ previewMode } class="compose btn"> ← Compose</span>
+        <span show={ !previewMode } class='preview btn'>Preview</span>
+        <span show={ previewMode } class='compose btn'> ← Compose</span>
       </span>
 
     </div>
@@ -54,8 +54,8 @@
       margin: 0px auto;
       margin-top: 10px;
       width: 80%;
-      padding: 5px 5px 5px 0px;
-      text-align: center;
+      padding: 5px 5px 5px 10px;
+      text-align: left;
     }
     .btn{
       cursor: pointer;
