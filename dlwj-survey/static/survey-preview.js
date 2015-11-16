@@ -6,7 +6,7 @@
 
   <div id='questions'>
 
-    <div class='question' each={ widget in opts.data.widgetData }>
+    <div class='question' each={ widget,i in opts.data.widgetData }>
 
       <h2>{ widget.question }</h2>
 
@@ -16,8 +16,8 @@
         <div each={ option in widget.options}>
           <span>
             <input type={ widget.type === 'radio' ? 'radio' : 'checkbox'}
-                   name={ widget.question }
-                   value={ option}/>
+                   name={ i }
+                   value={ option }/>
           </span>
           <span>{ option }</span>
         </div>

@@ -90,7 +90,7 @@
       widgetOptions.widgets.push({
         type: 'checkbox',
         question: 'Select all that apply.',
-        options: 'A,B,C'
+        options: '1,2,3'
       });
     }
 
@@ -99,7 +99,6 @@
       this.previewTemplateData = this._generatePreviewTemplateData();
     }
 
-    //Create data for preview.
     _generatePreviewTemplateData() {
 
       var surveyTitle = $('#survey-title').val();

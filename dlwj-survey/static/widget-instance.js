@@ -1,7 +1,7 @@
 <widget-instance>
 
   <div>
-    <span class="widget-type">{ opts.type }</span>
+    <span class="widget-type">{ opts.widget.type }</span>
     <span class="remove-widget" onclick={ remove }>x</span>
   </div>
 
@@ -9,7 +9,7 @@
     <span>
       <span class='input-label'>Question:</span>
       <input type="text" 
-             value={ opts.question } 
+             value={ opts.widget.question } 
              onkeyup={ editQuestion }>
     </span>
   </div>
@@ -19,7 +19,7 @@
       <span class='input-label'>Options:</span>
       <input type="text" 
              placeholder="Comma separated" 
-             value={ opts.options }
+             value={ opts.widget.options }
              onkeyup={ editOptions }>
     </span>
   </div>
@@ -57,30 +57,18 @@
 
   <script >
 
+
     editQuestion(e) {
-
-      //this method doesn't seem right...
-      //but change to nested attributes don't seem to propogate
-      //to the parent object.
-      //TODO: figure out proper way to make data reactive
-      var widgets = this.parent.opts.widgets;
-      var index = _.findIndex(widgets, function (widget) {
-        return widget.question === opts.question;
-      })
-      widgets[index].question = e.target.value;
-
+      opts.widget.question = e.target.value;
     }
 
     editOptions(e) {
-      var widgets = this.parent.opts.widgets;
-      var index = _.findIndex(widgets, function (widget) {
-        return widget.question === opts.question;
-      })
-      widgets[index].options = e.target.value;
+      opts.widget.options = e.target.value;
     }
 
     remove() {
-      this.parent.removeWidget(opts.question);
+      var widgets = this.parent.opts.widgets;
+      widgets.splice(opts.index,1);
     }
 
   </script>
